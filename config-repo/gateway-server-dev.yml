@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: api-gateway1
+          uri: lb://PROVIDER1
+          predicates:
+            - Path=/t/service1/**
+          filters:
+            - StripPrefix=1
+eureka:
+  instance:
+    hostname: api-gateway
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka8761:8761/eureka,http://eureka8762:8762/eureka,http://eureka8763:8763/eureka

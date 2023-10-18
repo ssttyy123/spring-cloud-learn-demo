@@ -1,7 +1,6 @@
 eureka:
   instance:
     prefer-ip-address: true
-    instance-id: providerX
     hostname: providerX
   client:
     service-url:
