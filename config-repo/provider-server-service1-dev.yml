@@ -1,17 +1,10 @@
 eureka:
   instance:
     prefer-ip-address: true
-    instance-id: providerX
-    hostname: providerX
+    hostname: provider1
   client:
     service-url:
       defaultZone: http://eureka8761:8761/eureka,http://eureka8762:8762/eureka,http://eureka8763:8763/eureka
 spring:
   application:
-    name: provider-serverX
-  cloud:
-    openfeign:
-      circuitbreaker:
-        enabled: true
-        alphanumeric-ids:
-          enabled: true
+    name: provider1
