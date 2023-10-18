@@ -1,13 +1,3 @@
-spring:
-  cloud:
-    gateway:
-      routes:
-        - id: api-gateway1
-          uri: lb://PROVIDER1
-          predicates:
-            - Path=/t/service1/**
-          filters:
-            - StripPrefix=1
 eureka:
   instance:
     hostname: api-gateway
